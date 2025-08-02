@@ -4,12 +4,20 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Etherea Labs - Digital Experience Studio</title>
+  <title>AqueousNite - Underwater Digital Experience Studio</title>
   <link rel="stylesheet" href="src/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Video Background -->
+  <div class="video-background">
+    <video autoplay muted loop id="ocean-video">
+      <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
   <!-- Page Transition Overlay -->
   <div id="page-transition" class="page-transition"></div>
 
@@ -19,7 +27,7 @@
   <!-- Loader (Element 1) -->
   <div id="loader">
     <div class="loader-content">
-      <div class="loader-logo">EL</div>
+      <div class="loader-logo">AN</div>
       <div class="loader-counter">0%</div>
       <div class="loader-progress">
         <div class="loader-bar"></div>
@@ -30,7 +38,7 @@
   <!-- Navbar (Element 4) -->
   <header class="header">
     <div class="header-container">
-      <div class="logo">Etherea Labs</div>
+      <div class="logo">AqueousNite</div>
       <nav class="navbar">
         <button class="navbar-toggle" aria-label="Toggle menu">
           <span></span>
@@ -39,10 +47,10 @@
         </button>
         <div class="navbar-menu">
           <ul class="nav-list">
-            <li><a href="#hero" class="nav-link">Home</a></li>
-            <li><a href="#work" class="nav-link">Work</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#team" class="nav-link">Team</a></li>
+            <li><a href="#hero" class="nav-link">Surface</a></li>
+            <li><a href="#work" class="nav-link">Coral Reef</a></li>
+            <li><a href="#services" class="nav-link">Abyss</a></li>
+            <li><a href="#team" class="nav-link">Pod</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </div>
@@ -54,11 +62,11 @@
     <!-- Hero Section with Text Animation (Element 9) -->
     <section id="hero" class="hero">
       <div class="hero-content">
-        <h1 class="hero-title">TRANSCENDING DIGITAL</h1>
-        <p class="hero-subtitle">We craft ethereal digital experiences that blur the line between technology and art. Every pixel tells a story, every interaction creates magic.</p>
+        <h1 class="hero-title">DIVING IN..</h1>
+        <p class="hero-subtitle">We craft immersive underwater digital experiences that flow like ocean currents. Every pixel ripples with life, every interaction creates waves of wonder.</p>
         <div class="hero-cta">
-          <a href="#work" class="btn btn-primary">Explore Our Work</a>
-          <a href="#contact" class="btn btn-secondary">Begin Journey</a>
+          <a href="#work" class="btn btn-primary">Explore the Reef</a>
+          <a href="#contact" class="btn btn-secondary">Begin the Dive</a>
         </div>
       </div>
       <div class="hero-background">
@@ -69,37 +77,37 @@
     <!-- Services Grid with Parallax (Element 3) -->
     <section id="services" class="services">
       <div class="container">
-        <h2 class="section-title">Our Craft</h2>
+        <h2 class="section-title">Oceanic Craft</h2>
         <div class="services-grid">
           <div class="service-card" data-aos="fade-up">
-            <div class="service-icon">🎨</div>
-            <h3>Digital Alchemy</h3>
-            <p>We transform ideas into digital gold through innovative design and cutting-edge technology. Our alchemists blend creativity with technical precision to create experiences that transcend the ordinary.</p>
+            <div class="service-icon">🐋</div>
+            <h3>Whale Song Strategy</h3>
+            <p>We orchestrate digital experiences that resonate like whale songs across the vast ocean of the internet. Our strategic approach creates deep, meaningful connections that echo through the digital depths.</p>
           </div>
           <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-icon">💻</div>
-            <h3>Code Poetry</h3>
-            <p>Elegant, performant code that dances between functionality and beauty. We write digital poetry that not only works flawlessly but also tells a story through its structure and flow.</p>
+            <div class="service-icon">🦈</div>
+            <h3>Shark-Fast Development</h3>
+            <p>Swift, precise code that cuts through complexity like a shark through water. We build digital solutions that are both powerful and elegant, moving with purpose and precision.</p>
           </div>
           <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-icon">📱</div>
-            <h3>Digital Strategy</h3>
-            <p>Strategic thinking that transforms brands and drives meaningful engagement. We craft digital roadmaps that align technology with business objectives and user needs.</p>
+            <div class="service-icon">🐙</div>
+            <h3>Octopus Intelligence</h3>
+            <p>Adaptive digital strategies that reach into every corner of your digital ecosystem. Like an octopus, our solutions are flexible, intelligent, and capable of solving complex problems with multiple approaches.</p>
           </div>
           <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-icon">🎬</div>
-            <h3>Visual Storytelling</h3>
-            <p>Compelling narratives that connect with audiences on a deeper level. We weave stories through visual design, creating emotional connections that resonate long after the first interaction.</p>
+            <div class="service-icon">🦑</div>
+            <h3>Deep Sea Storytelling</h3>
+            <p>Immersive narratives that draw users into the depths of your brand's story. We create digital experiences that flow like underwater currents, carrying your message through the digital ocean.</p>
           </div>
           <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-icon">🚀</div>
-            <h3>Innovation Lab</h3>
-            <p>Pushing the boundaries of what's possible in digital space. We experiment with emerging technologies to create tomorrow's experiences today.</p>
+            <div class="service-icon">🦐</div>
+            <h3>Coral Innovation Lab</h3>
+            <p>Building digital ecosystems that grow and adapt like coral reefs. We experiment with emerging technologies to create tomorrow's digital experiences today.</p>
           </div>
           <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-icon">🌟</div>
-            <h3>Experience Design</h3>
-            <p>Creating seamless journeys that delight users at every touchpoint. We design experiences that feel intuitive, engaging, and unforgettable.</p>
+            <div class="service-icon">🐠</div>
+            <h3>Reef Experience Design</h3>
+            <p>Creating vibrant digital environments where users can explore and discover. We design experiences that feel as natural and engaging as swimming through a coral reef.</p>
           </div>
         </div>
       </div>
@@ -108,60 +116,60 @@
     <!-- Work Section with Image Hover (Element 2) -->
     <section id="work" class="work">
       <div class="container">
-        <h2 class="section-title">Selected Works</h2>
+        <h2 class="section-title">Coral Collection</h2>
         <div class="work-grid">
           <div class="work-item" data-project="project1">
             <div class="work-content">
-              <h3>Project Nebula</h3>
-              <p>Immersive Web Experience & Brand Identity</p>
+              <h3>Project Atlantis</h3>
+              <p>Immersive Underwater Web Experience & Brand Identity</p>
             </div>
             <div class="work-image">
-              <img src="images/art1.jpg" alt="Project Nebula">
+              <img src="images/art1.jpg" alt="Project Atlantis">
             </div>
           </div>
           <div class="work-item" data-project="project2">
             <div class="work-content">
-              <h3>Quantum Flow</h3>
+              <h3>Ocean Flow</h3>
               <p>Mobile App & Interactive Design</p>
             </div>
             <div class="work-image">
-              <img src="images/art2.jpeg" alt="Quantum Flow">
+              <img src="images/art2.jpeg" alt="Ocean Flow">
             </div>
           </div>
           <div class="work-item" data-project="project3">
             <div class="work-content">
-              <h3>Ethereal Commerce</h3>
+              <h3>Abyssal Commerce</h3>
               <p>Next-Gen E-commerce Platform</p>
             </div>
             <div class="work-image">
-              <img src="images/art3.jpg" alt="Ethereal Commerce">
+              <img src="images/art3.jpg" alt="Abyssal Commerce">
             </div>
           </div>
           <div class="work-item" data-project="project4">
             <div class="work-content">
-              <h3>Digital Gallery</h3>
+              <h3>Marine Gallery</h3>
               <p>Interactive Art Exhibition</p>
             </div>
             <div class="work-image">
-              <img src="images/art4.jpeg" alt="Digital Gallery">
+              <img src="images/art4.jpeg" alt="Marine Gallery">
             </div>
           </div>
           <div class="work-item" data-project="project5">
             <div class="work-content">
-              <h3>Neural Network</h3>
+              <h3>Neural Current</h3>
               <p>AI-Powered Dashboard & Analytics</p>
             </div>
             <div class="work-image">
-              <img src="images/art1.jpg" alt="Neural Network">
+              <img src="images/art1.jpg" alt="Neural Current">
             </div>
           </div>
           <div class="work-item" data-project="project6">
             <div class="work-content">
-              <h3>Cosmic Portal</h3>
+              <h3>Deep Portal</h3>
               <p>Virtual Reality Experience</p>
             </div>
             <div class="work-image">
-              <img src="images/art2.jpeg" alt="Cosmic Portal">
+              <img src="images/art2.jpeg" alt="Deep Portal">
             </div>
           </div>
         </div>
@@ -171,7 +179,7 @@
     <!-- Infinite Image Marquee Section -->
     <section class="image-marquee-section">
       <div class="container">
-        <h2 class="section-title">Our Visual Universe</h2>
+        <h2 class="section-title">Our Marine Universe</h2>
         <div class="image-marquee-container">
           <div class="image-marquee">
             <div class="image-marquee-item">
@@ -220,23 +228,23 @@
     <section class="marquee-section">
       <div class="marquee-container">
         <div class="marquee">
-          <div class="marquee-item">Digital Alchemy</div>
-          <div class="marquee-item">Code Poetry</div>
-          <div class="marquee-item">Visual Storytelling</div>
-          <div class="marquee-item">Digital Strategy</div>
+          <div class="marquee-item">Whale Song Strategy</div>
+          <div class="marquee-item">Shark-Fast Development</div>
+          <div class="marquee-item">Deep Sea Storytelling</div>
+          <div class="marquee-item">Octopus Intelligence</div>
           <div class="marquee-item">Interactive Design</div>
           <div class="marquee-item">Brand Identity</div>
-          <div class="marquee-item">Innovation Lab</div>
-          <div class="marquee-item">Experience Design</div>
+          <div class="marquee-item">Coral Innovation Lab</div>
+          <div class="marquee-item">Reef Experience Design</div>
           <!-- Duplicate for infinite effect -->
-          <div class="marquee-item">Digital Alchemy</div>
-          <div class="marquee-item">Code Poetry</div>
-          <div class="marquee-item">Visual Storytelling</div>
-          <div class="marquee-item">Digital Strategy</div>
+          <div class="marquee-item">Whale Song Strategy</div>
+          <div class="marquee-item">Shark-Fast Development</div>
+          <div class="marquee-item">Deep Sea Storytelling</div>
+          <div class="marquee-item">Octopus Intelligence</div>
           <div class="marquee-item">Interactive Design</div>
           <div class="marquee-item">Brand Identity</div>
-          <div class="marquee-item">Innovation Lab</div>
-          <div class="marquee-item">Experience Design</div>
+          <div class="marquee-item">Coral Innovation Lab</div>
+          <div class="marquee-item">Reef Experience Design</div>
         </div>
       </div>
     </section>
@@ -244,7 +252,7 @@
     <!-- Our Team Section (Element 7) -->
     <section id="team" class="team">
       <div class="container">
-        <h2 class="section-title">The Artisans</h2>
+        <h2 class="section-title">The Pod</h2>
         <div class="team-container">
           <div class="team-list">
             <div class="team-member" data-image="images/team1.jpg">
@@ -284,15 +292,15 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2 class="section-title">Begin Your Journey</h2>
+        <h2 class="section-title">Begin Your Dive</h2>
         <div class="contact-content">
           <div class="contact-info">
-            <h3>Ready to transcend the digital realm?</h3>
-            <p>Let's create something extraordinary together. Your vision, our expertise, infinite possibilities.</p>
+            <h3>Ready to explore the digital depths?</h3>
+            <p>Let's create something extraordinary together. Your vision, our expertise, infinite possibilities beneath the surface.</p>
             <div class="contact-details">
               <div class="contact-item">
                 <span class="contact-icon">📧</span>
-                <span>hello@etherealabs.com</span>
+                <span>hello@aqueousnite.com</span>
               </div>
               <div class="contact-item">
                 <span class="contact-icon">📱</span>
@@ -300,7 +308,7 @@
               </div>
               <div class="contact-item">
                 <span class="contact-icon">📍</span>
-                <span>123 Digital Realm, Tech City</span>
+                <span>123 Ocean Drive, Tech City</span>
               </div>
             </div>
           </div>
@@ -324,16 +332,16 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-logo">Etherea Labs</div>
+        <div class="footer-logo">AqueousNite</div>
         <div class="footer-links">
-          <a href="#work">Work</a>
-          <a href="#services">Services</a>
-          <a href="#team">Team</a>
+          <a href="#work">Coral Reef</a>
+          <a href="#services">Abyss</a>
+          <a href="#team">Pod</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Etherea Labs. Transcending digital boundaries.</p>
+        <p>&copy; 2025 AqueousNite. Diving into digital depths.</p>
       </div>
     </div>
   </footer>

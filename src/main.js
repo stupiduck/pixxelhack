@@ -4,6 +4,52 @@ import { SplitText } from 'gsap/SplitText';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
+// ===== VIDEO BACKGROUND =====
+class VideoBackground {
+  constructor() {
+    this.video = document.getElementById('ocean-video');
+    this.init();
+  }
+
+  init() {
+    if (this.video) {
+      // Ensure video loads and plays properly
+      this.video.addEventListener('loadeddata', () => {
+        console.log('Ocean video loaded successfully');
+      });
+
+      this.video.addEventListener('error', (e) => {
+        console.error('Video loading error:', e);
+        // Fallback to a static background if video fails
+        this.setFallbackBackground();
+      });
+
+      // Add parallax effect to video based on scroll
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        if (this.video) {
+          this.video.style.transform = `translateY(${rate}px)`;
+        }
+      });
+    }
+  }
+
+  setFallbackBackground() {
+    const videoBackground = document.querySelector('.video-background');
+    if (videoBackground) {
+      videoBackground.style.background = `
+        linear-gradient(180deg, 
+          #001122 0%, 
+          #003366 25%, 
+          #006699 50%, 
+          #0099cc 75%, 
+          #00ccff 100%)
+      `;
+    }
+  }
+}
+
 // ===== PAGE TRANSITION =====
 class PageTransition {
   constructor() {
@@ -835,6 +881,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Initializing components...');
   
   // Initialize all components
+  new VideoBackground();
   new PageTransition();
   new CursorRipple();
   new Loader();
