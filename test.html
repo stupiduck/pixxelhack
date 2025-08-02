@@ -3,23 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test - Services Section</title>
+    <title>Test - Header & Background Fixes</title>
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition"></div>
+
+    <!-- Cursor Ripple Effect -->
+    <div id="cursor-ripple"></div>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">EL</div>
+            <div class="loader-counter">0%</div>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <div class="logo">Agency</div>
-            <nav class="navbar-menu">
-                <ul class="nav-list">
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#work" class="nav-link">Work</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
+            <div class="logo">Etherea Labs</div>
+            <nav class="navbar">
+                <button class="navbar-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="navbar-menu">
+                    <ul class="nav-list">
+                        <li><a href="#hero" class="nav-link">Home</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="#work" class="nav-link">Work</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">TRANSCENDING DIGITAL</h1>
+            <p class="hero-subtitle">We craft ethereal digital experiences that blur the line between technology and art.</p>
+            <div class="hero-cta">
+                <a href="#services" class="btn btn-primary">Explore Our Work</a>
+                <a href="#contact" class="btn btn-secondary">Begin Journey</a>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
@@ -41,6 +81,49 @@
                     <h3>Digital Strategy</h3>
                     <p>Strategic thinking that transforms brands and drives meaningful engagement.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+        <div class="container">
+            <h2 class="section-title">Selected Works</h2>
+            <div class="work-grid">
+                <div class="work-item">
+                    <div class="work-content">
+                        <h3>Project Nebula</h3>
+                        <p>Immersive Web Experience & Brand Identity</p>
+                    </div>
+                    <div class="work-image">
+                        <img src="images/art1.jpg" alt="Project Nebula">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Begin Your Journey</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to transcend the digital realm?</h3>
+                    <p>Let's create something extraordinary together.</p>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Tell us about your vision" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </div>
     </section>

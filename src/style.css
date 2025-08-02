@@ -26,6 +26,7 @@
   --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ===== UNIFIED BACKGROUND SYSTEM ===== */
 body {
   font-family: 'Poppins', sans-serif;
   background: var(--primary-color);
@@ -34,6 +35,23 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   cursor: none; /* Hide default cursor when ripple is active */
+  position: relative;
+}
+
+/* Global background overlay for consistent visual depth */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(0, 212, 255, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .container {
@@ -227,8 +245,9 @@ body {
   border-bottom: 1px solid rgba(0, 212, 255, 0.1);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
   /* Ensure header is always visible */
-  opacity: 1;
-  visibility: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
 }
 
 .header-container {
@@ -331,9 +350,8 @@ body {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.08) 0%, transparent 50%);
   z-index: 1;
 }
 
@@ -456,9 +474,8 @@ body {
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.06) 0%, transparent 50%);
 }
 
 /* ===== SERVICES SECTION (Element 3) ===== */
@@ -479,8 +496,8 @@ body {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 30% 70%, rgba(0, 212, 255, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(255, 107, 53, 0.04) 0%, transparent 50%);
   z-index: 1;
   pointer-events: none;
 }
@@ -588,8 +605,8 @@ body {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 30% 70%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 70% 30%, rgba(255, 107, 53, 0.03) 0%, transparent 50%);
+    radial-gradient(circle at 40% 60%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 60% 40%, rgba(255, 107, 53, 0.03) 0%, transparent 50%);
   z-index: 1;
 }
 
@@ -683,8 +700,8 @@ body {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 25% 75%, rgba(0, 212, 255, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 75% 25%, rgba(255, 107, 53, 0.04) 0%, transparent 50%);
   z-index: 1;
 }
 
@@ -753,8 +770,8 @@ body {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.03) 0%, transparent 50%);
+    radial-gradient(circle at 35% 65%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 65% 35%, rgba(255, 107, 53, 0.03) 0%, transparent 50%);
   z-index: 1;
 }
 
@@ -1077,7 +1094,7 @@ body {
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 10000;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;

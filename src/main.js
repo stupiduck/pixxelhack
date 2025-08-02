@@ -143,14 +143,21 @@ class Loader {
   }
 
   initPageAnimations() {
-    // Animate header with a slight delay - ensure it's visible
-    gsap.set('.header', { opacity: 1, visibility: 'visible' });
+    // Ensure header is immediately visible and properly positioned
+    gsap.set('.header', { 
+      opacity: 1, 
+      visibility: 'visible',
+      y: 0,
+      clearProps: 'all'
+    });
+    
+    // Animate header with a subtle entrance
     gsap.from('.header', {
-      y: -100,
+      y: -50,
       opacity: 0,
-      duration: 1.2,
+      duration: 0.8,
       ease: "power2.out",
-      delay: 0.2
+      delay: 0.3
     });
 
     // Animate hero content with staggered timing
@@ -158,7 +165,7 @@ class Loader {
       y: 50,
       opacity: 0,
       duration: 1.5,
-      delay: 0.5,
+      delay: 0.8,
       ease: "power2.out"
     });
 
@@ -842,18 +849,30 @@ document.addEventListener('DOMContentLoaded', () => {
   new ScrollAnimations();
 
   // Enhanced scroll-triggered header background
-  ScrollTrigger.create({
-    start: "top -100",
-    end: 99999,
-    onUpdate: (self) => {
-      const header = document.querySelector('.header');
-      if (self.progress > 0) {
-        header.style.background = 'rgba(10, 10, 10, 0.98)';
-        header.style.boxShadow = '0 2px 20px rgba(0, 212, 255, 0.1)';
-      } else {
-        header.style.background = 'rgba(10, 10, 10, 0.95)';
-        header.style.boxShadow = 'none';
+  setTimeout(() => {
+    ScrollTrigger.create({
+      start: "top -100",
+      end: 99999,
+      onUpdate: (self) => {
+        const header = document.querySelector('.header');
+        if (!header) return;
+        
+        if (self.progress > 0) {
+          gsap.to(header, {
+            background: 'rgba(10, 10, 10, 0.98)',
+            boxShadow: '0 2px 20px rgba(0, 212, 255, 0.1)',
+            duration: 0.3,
+            ease: "power2.out"
+          });
+        } else {
+          gsap.to(header, {
+            background: 'rgba(10, 10, 10, 0.95)',
+            boxShadow: 'none',
+            duration: 0.3,
+            ease: "power2.out"
+          });
+        }
       }
-    }
-  });
+    });
+  }, 1000); // Delay to ensure header animation completes first
 }); 
