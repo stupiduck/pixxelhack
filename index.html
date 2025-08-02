@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Etherea Labs - Digital Experience Studio</title>
+  <link rel="stylesheet" href="src/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Page Transition Overlay -->
+  <div id="page-transition" class="page-transition"></div>
+
+  <!-- Cursor Ripple Effect (Element 8) -->
+  <div id="cursor-ripple"></div>
+
+  <!-- Loader (Element 1) -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">EL</div>
+      <div class="loader-counter">0%</div>
+      <div class="loader-progress">
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar (Element 4) -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">Etherea Labs</div>
+      <nav class="navbar">
+        <button class="navbar-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="navbar-menu">
+          <ul class="nav-list">
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#work" class="nav-link">Work</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#team" class="nav-link">Team</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section with Text Animation (Element 9) -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">TRANSCENDING DIGITAL</h1>
+        <p class="hero-subtitle">We craft ethereal digital experiences that blur the line between technology and art. Every pixel tells a story, every interaction creates magic.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-primary">Explore Our Work</a>
+          <a href="#contact" class="btn btn-secondary">Begin Journey</a>
+        </div>
+      </div>
+      <div class="hero-background">
+        <div class="hero-particles"></div>
+      </div>
+    </section>
+
+    <!-- Services Grid with Parallax (Element 3) -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">Our Craft</h2>
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up">
+            <div class="service-icon">🎨</div>
+            <h3>Digital Alchemy</h3>
+            <p>We transform ideas into digital gold through innovative design and cutting-edge technology. Our alchemists blend creativity with technical precision to create experiences that transcend the ordinary.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">💻</div>
+            <h3>Code Poetry</h3>
+            <p>Elegant, performant code that dances between functionality and beauty. We write digital poetry that not only works flawlessly but also tells a story through its structure and flow.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">📱</div>
+            <h3>Digital Strategy</h3>
+            <p>Strategic thinking that transforms brands and drives meaningful engagement. We craft digital roadmaps that align technology with business objectives and user needs.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">🎬</div>
+            <h3>Visual Storytelling</h3>
+            <p>Compelling narratives that connect with audiences on a deeper level. We weave stories through visual design, creating emotional connections that resonate long after the first interaction.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">🚀</div>
+            <h3>Innovation Lab</h3>
+            <p>Pushing the boundaries of what's possible in digital space. We experiment with emerging technologies to create tomorrow's experiences today.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-icon">🌟</div>
+            <h3>Experience Design</h3>
+            <p>Creating seamless journeys that delight users at every touchpoint. We design experiences that feel intuitive, engaging, and unforgettable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section with Image Hover (Element 2) -->
+    <section id="work" class="work">
+      <div class="container">
+        <h2 class="section-title">Selected Works</h2>
+        <div class="work-grid">
+          <div class="work-item" data-project="project1">
+            <div class="work-content">
+              <h3>Project Nebula</h3>
+              <p>Immersive Web Experience & Brand Identity</p>
+            </div>
+            <div class="work-image">
+              <img src="images/art1.jpg" alt="Project Nebula">
+            </div>
+          </div>
+          <div class="work-item" data-project="project2">
+            <div class="work-content">
+              <h3>Quantum Flow</h3>
+              <p>Mobile App & Interactive Design</p>
+            </div>
+            <div class="work-image">
+              <img src="images/art2.jpeg" alt="Quantum Flow">
+            </div>
+          </div>
+          <div class="work-item" data-project="project3">
+            <div class="work-content">
+              <h3>Ethereal Commerce</h3>
+              <p>Next-Gen E-commerce Platform</p>
+            </div>
+            <div class="work-image">
+              <img src="images/art3.jpg" alt="Ethereal Commerce">
+            </div>
+          </div>
+          <div class="work-item" data-project="project4">
+            <div class="work-content">
+              <h3>Digital Gallery</h3>
+              <p>Interactive Art Exhibition</p>
+            </div>
+            <div class="work-image">
+              <img src="images/art4.jpeg" alt="Digital Gallery">
+            </div>
+          </div>
+          <div class="work-item" data-project="project5">
+            <div class="work-content">
+              <h3>Neural Network</h3>
+              <p>AI-Powered Dashboard & Analytics</p>
+            </div>
+            <div class="work-image">
+              <img src="images/art1.jpg" alt="Neural Network">
+            </div>
+          </div>
+          <div class="work-item" data-project="project6">
+            <div class="work-content">
+              <h3>Cosmic Portal</h3>
+              <p>Virtual Reality Experience</p>
+            </div>
+            <div class="work-image">
+              <img src="images/art2.jpeg" alt="Cosmic Portal">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infinite Image Marquee Section -->
+    <section class="image-marquee-section">
+      <div class="container">
+        <h2 class="section-title">Our Visual Universe</h2>
+        <div class="image-marquee-container">
+          <div class="image-marquee">
+            <div class="image-marquee-item">
+              <img src="images/art1.jpg" alt="Digital Art">
+            </div>
+            <div class="image-marquee-item">
+              <img src="images/art2.jpeg" alt="Digital Art">
+            </div>
+            <div class="image-marquee-item">
+              <img src="images/art3.jpg" alt="Digital Art">
+            </div>
+            <div class="image-marquee-item">
+              <img src="images/art4.jpeg" alt="Digital Art">
+            </div>
+            <div class="image-marquee-item">
+              <img src="images/art1.jpg" alt="Digital Art">
+            </div>
+            <div class="image-marquee-item">
+              <img src="images/art2.jpeg" alt="Digital Art">
+            </div>
+            <div class="image-marquee-item">
+              <img src="images/art3.jpg" alt="Digital Art">
+            </div>
+            <div class="image-marquee-item">
+              <img src="images/art4.jpeg" alt="Digital Art">
+            </div>
+            <!-- Duplicate for infinite effect -->
+            <div class="image-marquee-item">
+              <img src="images/art1.jpg" alt="Digital Art">
+            </div>
+            <div class="image-marquee-item">
+              <img src="images/art2.jpeg" alt="Digital Art">
+            </div>
+            <div class="image-marquee-item">
+              <img src="images/art3.jpg" alt="Digital Art">
+            </div>
+            <div class="image-marquee-item">
+              <img src="images/art4.jpeg" alt="Digital Art">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infinite Marquee (Element 6) -->
+    <section class="marquee-section">
+      <div class="marquee-container">
+        <div class="marquee">
+          <div class="marquee-item">Digital Alchemy</div>
+          <div class="marquee-item">Code Poetry</div>
+          <div class="marquee-item">Visual Storytelling</div>
+          <div class="marquee-item">Digital Strategy</div>
+          <div class="marquee-item">Interactive Design</div>
+          <div class="marquee-item">Brand Identity</div>
+          <div class="marquee-item">Innovation Lab</div>
+          <div class="marquee-item">Experience Design</div>
+          <!-- Duplicate for infinite effect -->
+          <div class="marquee-item">Digital Alchemy</div>
+          <div class="marquee-item">Code Poetry</div>
+          <div class="marquee-item">Visual Storytelling</div>
+          <div class="marquee-item">Digital Strategy</div>
+          <div class="marquee-item">Interactive Design</div>
+          <div class="marquee-item">Brand Identity</div>
+          <div class="marquee-item">Innovation Lab</div>
+          <div class="marquee-item">Experience Design</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team Section (Element 7) -->
+    <section id="team" class="team">
+      <div class="container">
+        <h2 class="section-title">The Artisans</h2>
+        <div class="team-container">
+          <div class="team-list">
+            <div class="team-member" data-image="images/team1.jpg">
+              <h3>Alex Rivera</h3>
+              <p>Creative Director & Digital Alchemist</p>
+            </div>
+            <div class="team-member" data-image="images/team2.jpg">
+              <h3>Jordan Lee</h3>
+              <p>Lead Developer & Code Poet</p>
+            </div>
+            <div class="team-member" data-image="images/team3.jpg">
+              <h3>Taylor Kim</h3>
+              <p>UX Designer & Visual Storyteller</p>
+            </div>
+            <div class="team-member" data-image="images/team4.jpg">
+              <h3>Casey Wong</h3>
+              <p>Digital Strategist & Brand Architect</p>
+            </div>
+            <div class="team-member" data-image="images/team1.jpg">
+              <h3>Morgan Chen</h3>
+              <p>Innovation Lead & Tech Visionary</p>
+            </div>
+            <div class="team-member" data-image="images/team2.jpg">
+              <h3>Riley Park</h3>
+              <p>Experience Designer & User Advocate</p>
+            </div>
+          </div>
+          <div class="team-image-container">
+            <div class="team-image-wrapper">
+              <img id="team-image" src="images/default.jpg" alt="Team Member">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Begin Your Journey</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Ready to transcend the digital realm?</h3>
+            <p>Let's create something extraordinary together. Your vision, our expertise, infinite possibilities.</p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <span>hello@etherealabs.com</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📱</span>
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <span>123 Digital Realm, Tech City</span>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" name="contact" method="POST" data-netlify="true">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Tell us about your vision" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">Etherea Labs</div>
+        <div class="footer-links">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Etherea Labs. Transcending digital boundaries.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
